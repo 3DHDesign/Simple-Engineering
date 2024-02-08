@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Models\Category;
 use App\Models\Product;
 use Camya\Filament\Forms\Components\TitleWithSlugInput;
 use Filament\Forms;
@@ -37,11 +38,12 @@ class ProductResource extends Resource
                         'string',
                     ],
                     slugSlugifier: fn ($string) => preg_replace('/[^a-z]/', '-', $string),
-                    slugRuleRegex: '/^[a-z]*$/',
                 ),
                 RichEditor::make('description'),
 
-                Select::make('category_id'),
+                Select::make('category_id')
+                    ->label('Select category')
+                    ->options(Category::pluck('name', 'id')->toArray()),
 
             ]);
     }
@@ -51,6 +53,7 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
+                TextColumn::make('category.name'),
             ])
             ->filters([
                 //
