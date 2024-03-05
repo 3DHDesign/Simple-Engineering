@@ -4,16 +4,12 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
-use App\Models\Category;
 use App\Models\Product;
-use Camya\Filament\Forms\Components\TitleWithSlugInput;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -28,23 +24,22 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
-                TitleWithSlugInput::make(
-                    fieldTitle: 'name',
-                    urlPath: '/products/',
-                    fieldSlug: 'slug',
-                    urlVisitLinkLabel: 'Visit Post',
-                    titleRules: [
-                        'required',
-                        'string',
-                    ],
-                    slugSlugifier: fn ($string) => preg_replace('/[^a-z]/', '-', $string),
-                ),
-                RichEditor::make('description'),
-
-                Select::make('category_id')
-                    ->label('Select category')
-                    ->options(Category::pluck('name', 'id')->toArray()),
-
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('short_description')
+                    ->maxLength(255),
+                Forms\Components\FileUpload::make('breadcrumb_image')
+                    ->image(),
+                Forms\Components\FileUpload::make('main_image')
+                    ->image(),
+                Forms\Components\FileUpload::make('image')
+                    ->image(),
+                RichEditor::make('description')
+                    ->maxLength(65535)
+                    ->columnSpanFull(),
+                Forms\Components\TextInput::make('slug')
+                    ->maxLength(255),
             ]);
     }
 
@@ -52,8 +47,13 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('category.name'),
+                Tables\Columns\ImageColumn::make('main_image')->circular(),
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('short_description')->wrap()
+                    ->searchable(),
+                Tables\Columns\ImageColumn::make('breadcrumb_image'),
+                Tables\Columns\ImageColumn::make('image'),
             ])
             ->filters([
                 //

@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="footer-column col-sm-6 col-lg-3 ps-xl-0">
+                {{-- <div class="footer-column col-sm-6 col-lg-3 ps-xl-0">
                     <div class="footer-widget lnews-widget">
                         <h4 class="widget-title">Latest News</h4>
                         <div class="widget-content">
@@ -94,7 +94,7 @@
                                         src="{{ asset('assets/images/resource/insta-thumb-6.jpg') }}" alt></a></figure>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

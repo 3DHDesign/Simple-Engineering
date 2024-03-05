@@ -4,119 +4,47 @@
         <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
             <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
                 <ul>
+                    @foreach ($sliders as $key => $slider)
+                        <li data-index="rs-{{ $key }}" data-transition="zoomin">
 
-                    <li data-index="rs-1" data-transition="zoomout">
-
-                        <img src="{{ asset('assets/images/main-slider/slider1-2.jpg') }}" alt class="rev-slidebg">
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]"
-                            data-responsive_offset="on" data-type="text" data-height="none"
-                            data-width="['825','825','825','480']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['-150','-150','-150','-130']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <span class="title">AC Inspection, Maintenance and Installation</span>
-                        </div>
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
-                            data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none"
-                            data-width="['825','825','825','500']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['-10','0','0','0']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <h2 class="text-white">Your Comfort <br class="d-none d-lg-block"> is Just A Call Away</h2>
-                        </div>
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
-                            data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none"
-                            data-width="['700','750','700','450']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['180','210','180','180']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <a href="{{ route('contact') }}" class="theme-btn btn-style-one"><span
-                                    class="btn-title">Discover
-                                    More</span></a>
-                        </div>
-                    </li>
-
-                    <li data-index="rs-2" data-transition="zoomin">
-
-                        <img src="{{ asset('assets/images/main-slider/slider1-3.jpg') }}" alt class="rev-slidebg">
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]"
-                            data-responsive_offset="on" data-type="text" data-height="none"
-                            data-width="['750','750','750','480']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['-150','-150','-150','-130']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <span class="title">Only High Quality Service Provider</span>
-                        </div>
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
-                            data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none"
-                            data-width="['825','825','825','500']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['-10','0','0','0']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <h2 class="text-white">Best Service <br class="d-none d-lg-block">With Affordable Cost
-                            </h2>
-                        </div>
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
-                            data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
-                            data-height="none" data-width="['700','750','700','450']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['180','210','180','180']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <a href="{{ route('contact') }}" class="theme-btn btn-style-one"><span
-                                    class="btn-title">Discover
-                                    More</span></a>
-                        </div>
-                    </li>
-
-                    <li data-index="rs-3" data-transition="zoomin">
-
-                        <img src="{{ asset('assets/images/main-slider/slider1-4.jpg') }}" alt class="rev-slidebg">
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]"
-                            data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
-                            data-height="none" data-width="['750','750','750','480']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['-150','-150','-150','-130']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <span class="title">Only High Quality Service Provider</span>
-                        </div>
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
-                            data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
-                            data-height="none" data-width="['825','825','825','500']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['-10','0','0','0']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <h2 class="text-white">Best Top-Notch <br class="d-none d-lg-block">Maintenance Service
-                            </h2>
-                        </div>
-                        <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
-                            data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
-                            data-height="none" data-width="['700','750','700','450']" data-whitespace="normal"
-                            data-hoffset="['0','0','0','0']" data-voffset="['180','210','180','180']"
-                            data-x="['center','center','center','center']"
-                            data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
-                            data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <a href="{{ route('contact') }}" class="theme-btn btn-style-one"><span
-                                    class="btn-title">Learn
-                                    More</span></a>
-                        </div>
-                    </li>
+                            <img src="{{ asset('storage/' . $slider->image) }}" alt class="rev-slidebg">
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]"
+                                data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
+                                data-height="none" data-width="['825','825','825','480']" data-whitespace="normal"
+                                data-hoffset="['0','0','0','0']" data-voffset="['-150','-150','-150','-130']"
+                                data-x="['center','center','center','center']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-textalign="['top','top','top','top']"
+                                data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
+                                <span class="title">{{ $slider->slogan }}</span>
+                            </div>
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
+                                data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
+                                data-height="none" data-width="['825','825','825','500']" data-whitespace="normal"
+                                data-hoffset="['0','0','0','0']" data-voffset="['-10','0','0','0']"
+                                data-x="['center','center','center','center']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-textalign="['top','top','top','top']"
+                                data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
+                                <h2 class="text-white">{!! $slider->title !!}</h2>
+                            </div>
+                            <div class="tp-caption text-center" data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]"
+                                data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
+                                data-height="none" data-width="['700','750','700','450']" data-whitespace="normal"
+                                data-hoffset="['0','0','0','0']" data-voffset="['180','210','180','180']"
+                                data-x="['center','center','center','center']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-textalign="['top','top','top','top']"
+                                data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
+                                <a href="{{ route('contact') }}" class="theme-btn btn-style-one"><span
+                                        class="btn-title">Discover
+                                        More</span></a>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -130,7 +58,7 @@
                 <div class="service-block-three col-md-6 col-lg-4">
                     <div class="inner-box">
                         <div class="lower-content">
-                            <a href="{{ route('contact') }}" class="read-more theme-btn btn-style-one"><span
+                            <a href="{{ route('products') }}" class="read-more theme-btn btn-style-one"><span
                                     class="btn-title">View
                                     Details</span></a>
                             <h4 class="title"><a href="page-service-details.html">Hydro Load Controller</a></h4>
@@ -147,7 +75,7 @@
                 <div class="service-block-three col-md-6 col-lg-4">
                     <div class="inner-box">
                         <div class="lower-content">
-                            <a href="{{ route('contact') }}" class="read-more theme-btn btn-style-one"><span
+                            <a href="{{ route('products') }}" class="read-more theme-btn btn-style-one"><span
                                     class="btn-title">View
                                     Details</span></a>
                             <h4 class="title"><a href="page-service-details.html">Grid Synchronizer Relay</a></h4>
@@ -164,7 +92,7 @@
                 <div class="service-block-three col-md-6 col-lg-4">
                     <div class="inner-box">
                         <div class="lower-content">
-                            <a href="{{ route('contact') }}" class="read-more theme-btn btn-style-one"><span
+                            <a href="{{ route('products') }}" class="read-more theme-btn btn-style-one"><span
                                     class="btn-title">View
                                     Details</span></a>
                             <h4 class="title"><a href="page-service-details.html">Automatic Synchronizer</a></h4>
@@ -321,7 +249,7 @@
                                 </figure>
                             </div>
                             <div class="lower-content">
-                                <h4 class="title"><a href="page-service-details.html">Energy Auditing</a></h4>
+                                <h4 class="title"><a href="{{ route('services') }}">Energy Auditing</a></h4>
                             </div>
                         </div>
                     </div>
@@ -335,7 +263,7 @@
                                 </figure>
                             </div>
                             <div class="lower-content">
-                                <h4 class="title"><a href="page-service-details.html">Carbon Footprint Analysis</a>
+                                <h4 class="title"><a href="{{ route('services') }}">Carbon Footprint Analysis</a>
                                 </h4>
                             </div>
                         </div>
@@ -350,7 +278,7 @@
                                 </figure>
                             </div>
                             <div class="lower-content">
-                                <h4 class="title"><a href="page-service-details.html">Solar PV Solutions</a></h4>
+                                <h4 class="title"><a href="{{ route('services') }}">Solar PV Solutions</a></h4>
                             </div>
                         </div>
                     </div>
@@ -364,7 +292,7 @@
                                 </figure>
                             </div>
                             <div class="lower-content">
-                                <h4 class="title"><a href="page-service-details.html">Hydro Power Plant
+                                <h4 class="title"><a href="{{ route('services') }}">Hydro Power Plant
                                         Development</a></h4>
                             </div>
                         </div>
@@ -379,7 +307,7 @@
                                 </figure>
                             </div>
                             <div class="lower-content">
-                                <h4 class="title"><a href="page-service-details.html">Hydro Power Plant
+                                <h4 class="title"><a href="{{ route('services') }}">Hydro Power Plant
                                         Maintenance</a></h4>
                             </div>
                         </div>
@@ -394,7 +322,7 @@
                                 <h4 class="title"><a href="energy-service-details.html">Unlock Sustainable Solutions
                                         for Your Energy
                                         Needs</a></h4>
-                                <a href="energy-about.html" class="theme-btn btn-style-one"><span
+                                <a href="{{ route('services') }}" class="theme-btn btn-style-one"><span
                                         class="btn-title">Discover
                                         More</span></a>
                             </div>
@@ -433,134 +361,80 @@
             <div class="row">
                 <div class="home4-project-slider owl-carousel owl-theme">
 
-                    <div class="project-block-two wow fadeInUp">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a class="icon far fa-plus" href="page-project-details.html"></a>
-                                    <a class="w-100 lightbox-image"
-                                        href="{{ asset('assets/images/resource/project-1.jpg') }}"><img
-                                            src="{{ asset('assets/images/resource/project-1.jpg') }}" alt></a>
-                                </figure>
-                                <div class="info-box">
-                                    <span class="cat">Energy</span>
-                                    <h4 class="title my-0"><a href="page-project-details.html">Solar panel project</a>
-                                    </h4>
+                    @if (!empty($projects))
+                        @foreach ($projects as $project)
+                            <div class="project-block-two wow fadeInUp">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image">
+                                            <a class="icon far fa-plus" href="page-project-details.html"></a>
+                                            <a class="w-100 lightbox-image"
+                                                href="{{ asset('storage/' . $project->main_image) }}"><img
+                                                    src="{{ asset('storage/' . $project->main_image) }}" alt></a>
+                                        </figure>
+                                        <div class="info-box">
+                                            <h4 class="title my-0"><a
+                                                    href="page-project-details.html">{{ $project->name }}</a>
+                                            </h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="project-block-two wow fadeInUp">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a class="icon far fa-plus" href="page-project-details.html"></a>
-                                    <a class="w-100 lightbox-image"
-                                        href="{{ asset('assets/images/resource/project-1.jpg') }}"><img
-                                            src="{{ asset('assets/images/resource/project-1.jpg') }}" alt></a>
-                                </figure>
-                                <div class="info-box">
-                                    <span class="cat">Energy</span>
-                                    <h4 class="title my-0"><a href="page-project-details.html">Solar panel project</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-block-two wow fadeInUp">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a class="icon far fa-plus" href="page-project-details.html"></a>
-                                    <a class="w-100 lightbox-image"
-                                        href="{{ asset('assets/images/resource/project-1.jpg') }}"><img
-                                            src="{{ asset('assets/images/resource/project-1.jpg') }}" alt></a>
-                                </figure>
-                                <div class="info-box">
-                                    <span class="cat">Energy</span>
-                                    <h4 class="title my-0"><a href="page-project-details.html">Solar panel project</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
 
                 </div>
             </div>
         </div>
     </section>
+    @if (!empty($allnews))
+        <section class="news-section pb-90">
+            <div class="auto-container">
+                <div class="text-center">
+                    <div class="sec-title">
+                        <span class="sub-title">Our Publications</span>
+                        <h2>News & Articles</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach ($allnews as $news)
+                        @php
+                            $created_at = $news->created_at;
 
-    <section class="news-section pb-90">
-        <div class="auto-container">
-            <div class="text-center">
-                <div class="sec-title">
-                    <span class="sub-title">Our Publications</span>
-                    <h2>News & Articles</h2>
+                            // Extracting day and month from the created_at date
+                            $day = $created_at->format('d');
+                            $month = $created_at->format('M');
+
+                            // Converting month abbreviation to its numeric representation
+                            $month_number = Carbon\Carbon::createFromFormat('M', $month)->format('m');
+
+                            // Creating a Carbon instance with the extracted date
+                            $date = Carbon\Carbon::createFromFormat('m-d', $month_number . '-' . $day);
+
+                            $formatted_date = $date->format('d M');
+                        @endphp
+                        <div class="news-block col-lg-4 col-md-6 wow fadeInUp">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <figure class="image"><a href="{{ route('news.inner', ['id' => $news->id, 'slug'=> Str::slug($news->name)]) }}"><img
+                                                src="{{ asset('storage/' . $news->image) }}" alt></a>
+                                    </figure>
+                                    <span class="date">{{ $formatted_date }}</span>
+                                </div>
+                                <div class="lower-content">
+                                    <h4 class="title"><a href="{{ route('news.inner', ['id' => $news->id, 'slug'=> Str::slug($news->name)]) }}">{{ $news->name }}</a></h4>
+                                    <a href="{{ route('news.inner', ['id' => $news->id, 'slug'=> Str::slug($news->name)]) }}" class="read-more">Read More <i
+                                            class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
-            <div class="row">
+        </section>
 
-                <div class="news-block col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="news-details.html"><img
-                                        src="{{ asset('assets/images/resource/news-1.jpg') }}" alt></a>
-                            </figure>
-                            <span class="date">17 <span class="month">APR</span></span>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-info">
-                                <li><i class="far fa-circle-user"></i>By 3dh design</li>
-                                <li><i class="fa-sharp fal fa-comments fa-fw"></i> 2 Comments</li>
-                            </ul>
-                            <h4 class="title"><a href="news-details.html">Energy solution problems</a></h4>
-                            <a href="news-details.html" class="read-more">Read More <i
-                                    class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-block col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="news-details.html"><img
-                                        src="{{ asset('assets/images/resource/news-1.jpg') }}" alt></a>
-                            </figure>
-                            <span class="date">17 <span class="month">APR</span></span>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-info">
-                                <li><i class="far fa-circle-user"></i>By 3dh design</li>
-                                <li><i class="fa-sharp fal fa-comments fa-fw"></i> 2 Comments</li>
-                            </ul>
-                            <h4 class="title"><a href="news-details.html">Energy solution problems</a></h4>
-                            <a href="news-details.html" class="read-more">Read More <i
-                                    class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-block col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="news-details.html"><img
-                                        src="{{ asset('assets/images/resource/news-1.jpg') }}" alt></a>
-                            </figure>
-                            <span class="date">17 <span class="month">APR</span></span>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-info">
-                                <li><i class="far fa-circle-user"></i>By 3dh design</li>
-                                <li><i class="fa-sharp fal fa-comments fa-fw"></i> 2 Comments</li>
-                            </ul>
-                            <h4 class="title"><a href="news-details.html">Energy solution problems</a></h4>
-                            <a href="news-details.html" class="read-more">Read More <i
-                                    class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    @endif
 
 
     <section>

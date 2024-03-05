@@ -10,11 +10,18 @@
                     <div class="nav-outer">
                         <nav class="nav main-menu">
                             <ul class="navigation">
-                                <li class="current"><a href="{{ route('home') }}" wire:navigate>Home</a></li>
-                                <li><a href="{{ route('products') }}" wire:navigate>Products</a></li>
-                                <li><a href="{{ route('about') }}" wire:navigate>About us</a></li>
-                                <li><a href="{{ route('services') }}" wire:navigate>Services</a></li>
-                                <li><a href="{{ route('contact') }}" wire:navigate>Contact us</a></li>
+                                <li class="{{ Route::is('home') ? 'current' : '' }}"><a href="{{ route('home') }}"
+                                        wire:navigate>Home</a></li>
+                                <li class="{{ Route::is('products') ? 'current' : '' }}"><a
+                                        href="{{ route('products') }}" wire:navigate>Products</a></li>
+                                <li class="{{ Route::is('about') ? 'current' : '' }}"><a href="{{ route('about') }}"
+                                        wire:navigate>About us</a></li>
+                                <li class="{{ Route::is('services') ? 'current' : '' }}"><a
+                                        href="{{ route('services') }}" wire:navigate>Services</a></li>
+                                <li class="{{ Route::is('publications') ? 'current' : '' }}"><a
+                                        href="{{ route('pub') }}" wire:navigate>Publications</a></li>
+                                <li class="{{ Route::is('contact') ? 'current' : '' }}"><a
+                                        href="{{ route('contact') }}" wire:navigate>Contact us</a></li>
                             </ul>
                         </nav>
 
