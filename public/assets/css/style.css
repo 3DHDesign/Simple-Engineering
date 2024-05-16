@@ -172,6 +172,7 @@ body {
   font-family: var(--text-font);
   font-weight: var(--body-font-weight);
   line-height: var(--body-line-height);
+  overflow-x: hidden;
 }
 
 p,
@@ -4276,7 +4277,7 @@ Section Title
   font-weight: 700;
   letter-spacing: 1.6px;
   position: relative;
-  text-transform: uppercase;
+ 
 }
 
 .sec-title .sub-title:before {
@@ -4308,8 +4309,10 @@ Section Title
   font-weight: var(--sec-title-font-weight);
   margin-bottom: 0;
   padding-bottom: 12px;
+  font-size:35px;
 }
 
+ 
 @media only screen and (max-width: 1023px) {
   .sec-title h2 {
     font-size: 38px;
@@ -18732,4 +18735,9 @@ Sidebar
 
 .footer-bottom.home5-style {
   background-color: #282828;
+}
+
+
+.simple-green {
+  color: #077d00;
 }
